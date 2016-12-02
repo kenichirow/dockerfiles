@@ -48,7 +48,7 @@ ENV PATH /opt/erlang-${OTP_VERSION}/bin:$PATH
 
 ENV PREFIX /opt/elixir-$ELIXIR_VERSION
 
-RUN curl -sSL https://github.com/elixir-lang/elixir/archive/v$ELIXIR_VERSION.tar.gz -o /usr/local/src/elixir-$ELIXIR_VERSION.tar.gz
+RUN curl -sSL https://github.com/elixir-lang/elixir/archive/v$ELIXIR_VERSION.tar.gz -o /usr/local/src/elixir-$ELIXIR_VERSION.tar.gz \
   && cd /usr/local/src \
   && echo '3d7d8fc89c731f24428a5500a6807f483fa93acb *elixir-1.4.0-rc.0.tar.gz' | sha1sum -c \
   && tar xf elixir-$ELIXIR_VERSION.tar.gz \
