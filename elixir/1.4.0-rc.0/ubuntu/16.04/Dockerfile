@@ -6,7 +6,7 @@ RUN locale-gen ja_JP.UTF-8 \
   && update-locale LC_ALL=ja_JP.UTF-8
 ENV LC_ALL ja_JP.UTF-8
 
-ENV OTP_VERSION 19.1
+ENV OTP_VERSION 19.2
 ENV ELIXIR_VERSION 1.4.0-rc.0
 
 RUN apt-get update \
