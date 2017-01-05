@@ -21,7 +21,7 @@ RUN apt-get update \
 
 RUN curl -sSL "http://www.erlang.org/download/otp_src_${OTP_VERSION}.tar.gz" -o /usr/local/src/otp_src_${OTP_VERSION}.tar.gz \
   && cd /usr/local/src \
-  && echo '9f83a442de96c075a7cd1c42ceae9e3ce44b8f76 *otp_src_19.1.tar.gz' | sha1sum -c \
+  && echo 'f5188ba6f496b9d1c37597705d095b4e6aa7bcd3 *otp_src_19.2.tar.gz' | sha1sum -c \
   && tar xf otp_src_${OTP_VERSION}.tar.gz \
   && cd otp_src_${OTP_VERSION} \
   && ./configure --prefix=/opt/erlang-${OTP_VERSION} \
