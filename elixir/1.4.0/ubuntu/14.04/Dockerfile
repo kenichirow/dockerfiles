@@ -15,6 +15,7 @@ RUN apt-get update \
          git \
          curl \
          libssl-dev \
+         libexpat-dev \
          ncurses-dev \
   && apt-get clean \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
