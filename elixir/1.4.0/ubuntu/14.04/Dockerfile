@@ -25,19 +25,7 @@ RUN curl -sSL "http://www.erlang.org/download/otp_src_${OTP_VERSION}.tar.gz" -o 
   && echo 'f5188ba6f496b9d1c37597705d095b4e6aa7bcd3 *otp_src_19.2.tar.gz' | sha1sum -c \
   && tar xf otp_src_${OTP_VERSION}.tar.gz \
   && cd otp_src_${OTP_VERSION} \
-  && ./configure --prefix=/opt/erlang-${OTP_VERSION} \
-                 --enable-kernel-poll \
-                 --enable-hipe \
-                 --enable-dirty-schedulers \
-                 --enable-smp-support \
-                 --enable-m64-build \
-                 --enable-sharing-preserving \
-                 --without-javac \
-                 --disable-native-libs \
-                 --disable-vm-probes \
-                 --disable-megaco-flex-scanner-lineno \
-                 --disable-megaco-reentrant-flex-scanner \
-                 --disable-sctp \
+  && ./configure \
   && make \
   && make install \
   && cd .. \
